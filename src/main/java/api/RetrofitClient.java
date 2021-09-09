@@ -22,4 +22,8 @@ public class RetrofitClient {
         return mInstance;
     }
 
+    public QinayaCompuAPI getEndpoints() {
+        return retrofit.create(QinayaCompuAPI.class);
+    }
+
 }
