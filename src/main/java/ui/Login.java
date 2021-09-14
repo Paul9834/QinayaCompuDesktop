@@ -8,23 +8,39 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 public class Login extends JFrame {
     private JButton button1;
     private JTextField ingreseCorreoTextField;
     private JPanel mainPanel;
     private JPasswordField contraseña_field;
+    private JLabel icon_qinaya;
+
     public static void main(String[] args) {
-        Login login = new Login();
+       Login login = new Login();
     }
 
     public Login() {
+
+
+
+
         setContentPane(mainPanel);
         setTitle("Qinaya Compu");
         setSize(500, 500);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setVisible(true);
+        this.setLocationRelativeTo(null);
+
+        ImageIcon logo_qin = new ImageIcon("leanbackqinaya.png");
+        icon_qinaya.setIcon(logo_qin);
+
+
 
      /*   new Main().setVisible(true);
         setVisible(false);*/

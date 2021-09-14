@@ -12,7 +12,7 @@ public interface QinayaCompuAPI {
 
 
     @FormUrlEncoded
-    @POST("api/mobile/user_home")
+    @POST("api/mobile/user_home_desktop")
     Call<UserMachines> getDesktop(@Field("id") String id);
 
     @POST("api/mobile/login")

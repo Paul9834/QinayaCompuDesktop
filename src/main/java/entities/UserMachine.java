@@ -2,12 +2,16 @@ package entities;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 public class UserMachine {
+
     @SerializedName("plan_activo")
     @Expose
-    private boolean planActivo;
+    private String planActivo;
     @SerializedName("tiempo_disponible")
     @Expose
     private String tiempoDisponible;
+    @SerializedName("used_trial")
+    @Expose
+    private String usedTrial;
     @SerializedName("sistema_operativo")
     @Expose
     private String sistemaOperativo;
@@ -22,13 +26,25 @@ public class UserMachine {
     private String url;
     @SerializedName("server_status")
     @Expose
-    private Integer serverStatus;
+    private String serverStatus;
+    @SerializedName("rdp_host")
+    @Expose
+    private String rdpHost;
+    @SerializedName("rdp_port")
+    @Expose
+    private String rdpPort;
+    @SerializedName("rdp_username")
+    @Expose
+    private String rdpUsername;
+    @SerializedName("rdp_password")
+    @Expose
+    private String rdpPassword;
 
-    public boolean isPlanActivo() {
+    public String getPlanActivo() {
         return planActivo;
     }
 
-    public void setPlanActivo(boolean planActivo) {
+    public void setPlanActivo(String planActivo) {
         this.planActivo = planActivo;
     }
 
@@ -38,6 +54,14 @@ public class UserMachine {
 
     public void setTiempoDisponible(String tiempoDisponible) {
         this.tiempoDisponible = tiempoDisponible;
+    }
+
+    public String getUsedTrial() {
+        return usedTrial;
+    }
+
+    public void setUsedTrial(String usedTrial) {
+        this.usedTrial = usedTrial;
     }
 
     public String getSistemaOperativo() {
@@ -72,24 +96,61 @@ public class UserMachine {
         this.url = url;
     }
 
-    public Integer getServerStatus() {
+    public String getServerStatus() {
         return serverStatus;
     }
 
-    public void setServerStatus(Integer serverStatus) {
+    public void setServerStatus(String serverStatus) {
         this.serverStatus = serverStatus;
+    }
+
+    public String getRdpHost() {
+        return rdpHost;
+    }
+
+    public void setRdpHost(String rdpHost) {
+        this.rdpHost = rdpHost;
+    }
+
+    public String getRdpPort() {
+        return rdpPort;
+    }
+
+    public void setRdpPort(String rdpPort) {
+        this.rdpPort = rdpPort;
+    }
+
+    public String getRdpUsername() {
+        return rdpUsername;
+    }
+
+    public void setRdpUsername(String rdpUsername) {
+        this.rdpUsername = rdpUsername;
+    }
+
+    public String getRdpPassword() {
+        return rdpPassword;
+    }
+
+    public void setRdpPassword(String rdpPassword) {
+        this.rdpPassword = rdpPassword;
     }
 
     @Override
     public String toString() {
         return "UserMachine{" +
-                "planActivo=" + planActivo +
+                "planActivo='" + planActivo + '\'' +
                 ", tiempoDisponible='" + tiempoDisponible + '\'' +
+                ", usedTrial='" + usedTrial + '\'' +
                 ", sistemaOperativo='" + sistemaOperativo + '\'' +
                 ", logoSo='" + logoSo + '\'' +
                 ", plan='" + plan + '\'' +
                 ", url='" + url + '\'' +
-                ", serverStatus=" + serverStatus +
+                ", serverStatus='" + serverStatus + '\'' +
+                ", rdpHost='" + rdpHost + '\'' +
+                ", rdpPort='" + rdpPort + '\'' +
+                ", rdpUsername='" + rdpUsername + '\'' +
+                ", rdpPassword='" + rdpPassword + '\'' +
                 '}';
     }
 }
